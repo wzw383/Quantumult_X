@@ -30,6 +30,8 @@
 [general]
 ;profile_img_url =http://www.example.com/example.png
 ;resource_parser_url =http://www.example.com/parser.js
+# GitHub源
+resource_parser_url= https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/resource-parser.js
 ;network_check_url =http://bing.com
 ;server_check_url =http://www.google.com/generate_204
 ;server_check_user_agent = Agent/1.0
@@ -110,6 +112,32 @@ server = 8.8.8.8
 ;dest-hash = policy-name-8, resource-tag-regex=^sample, server-tag-regex=^example
 ;url-latency-benchmark = policy-name-9, resource-tag-regex=^sample, server-tag-regex=^example, check-interval=600, alive-checking=false, tolerance=0
 
+static=全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+static=Apple, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
+static=AI_Platforms, AI_Platforms节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+static=Duolingo节点, 全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UN.png
+static=GlobalSNS, 全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
+static=TikTok, 国际媒体, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TikTok.png
+static=Netflix, Netflix节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
+static=YouTube, 国际媒体, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/YouTube.png
+static=BiliBili（非大陆版）, direct, 港台番剧, 香港节点, 台湾节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Bili.png
+static=巴哈姆特, 港台番剧, 香港节点, 台湾节点, proxy
+static=国际媒体, 全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Streaming.png
+static=港台番剧, direct, 香港节点, 台湾节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingSE.png
+static=国内影视, direct, 香港节点, 台湾节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/StreamingCN.png
+static=漏网之鱼, direct, 全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, reject, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
+url-latency-benchmark=香港节点, server-tag-regex=((IEPL|IPLC).*港.*)|(.*港.*专线.*)|(.*Hong.*Kong.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+url-latency-benchmark=台湾节点, server-tag-regex=((IEPL|IPLC).*台.*)|(.*台.*专线.*)|(.*Taiwan.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+url-latency-benchmark=日本节点, server-tag-regex=((IEPL|IPLC).*日.*)|(.*日.*专线.*)|(.*Japan.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png
+url-latency-benchmark=狮城节点, server-tag-regex=((IEPL|IPLC).*新.*)|(.*新.*专线.*)|(.*Singapore.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
+url-latency-benchmark=美国节点, server-tag-regex=((IEPL|IPLC).*美.*)|(.*美.*专线.*)|(.*US.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
+url-latency-benchmark=英国节点, server-tag-regex=((IEPL|IPLC).*英.*)|(.*英.*专线.*)|(.*UK.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png
+url-latency-benchmark=韩国节点, server-tag-regex=((IEPL|IPLC).*韩.*)|(.*韩.*专线.*)|(.*Korea.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
+static=Netflix节点, server-tag-regex=(.*Netflix.*)|(.*NF.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
+static=AI_Platforms节点, server-tag-regex=(.*GPT.*)|(.*AI.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+static=Duolingo节点, server-tag-regex=(.*GPT.*)|(.*AI.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+static=DNS查询节点, direct, 香港节点, proxy
+
 #
 # Params "tag" and "enabled" are optional.
 # The default sync interval for all kinds of remote resources is 86400 seconds.
@@ -133,12 +161,106 @@ FILTER_REGION, tag=CN, force-policy=direct, enabled=true
 ;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.snippet, tag=Sample, force-policy=your-policy-name, enabled=true
 ;https://example.com/filter.snippet, tag=Sample, force-policy=your-policy-name, require-devices=ID1, ID2, enabled=true
 
+# Block Http DNS
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BlockHttpDNS/BlockHttpDNS.list, tag=🛡️BlockHttpDNS, force-policy=reject, update-interval=172800, enabled=true
+# Http DNS
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DNS/DNS.list, tag=DNS, force-policy=DNS查询节点, update-interval=172800, opt-parser=false, enabled=true
+
+# Advertising 广告 （毒奶/DivineEngine二选一）
+# 毒奶去广告计划（与https://limbopro.com/Adblock4limbo.conf重写共用）
+https://limbopro.com/Adblock4limbo.list, tag=🛡AdblockForLimbo, force-policy=reject, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block.txt, tag=🛡野比(4W+), force-policy=reject, update-interval=172800, enabled=false
+https://raw.githubusercontent.com/NobyDa/ND-AD/master/QuantumultX/AD_Block_Plus.txt, tag=🛡野比(6W+), force-policy=reject, update-interval=172800, enabled=true
+
+# Privacy 隐私
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Privacy/Privacy.list, tag=🛡️Privacy, force-policy=reject, update-interval=172800, enabled=true
+
+# Hijacking 运营商劫持或恶意网站
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list, tag=🛡️Hijacking, force-policy=reject, update-interval=172800, enabled=true
+
+# stun 防泄露
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/STUN/STUN.list, tag=🛡️STUN, force-policy=reject, update-interval=172800, enabled=true
+
+# 机场专线
+https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=✈️机场专线, force-policy=direct, update-interval=172800, enabled=true
+
+# 中国移动
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ChinaMobile/ChinaMobile.list, tag=中国移动, force-policy=direct, update-interval=172800, enabled=true
+
+# 内网、下载直连
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Lan/Lan.list, tag=LAN, force-policy=direct, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Download/Download.list, tag=Download, force-policy=direct, update-interval=172800, enabled=true
+
+# Apple 服务
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Apple/Apple.list, tag=🍎Apple, force-policy=Apple, update-interval=172800, enabled=true
+
+# Duolingo
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Duolingo/Duolingo.list, tag=📚Duolingo, force-policy=Duolingo节点, update-interval=172800, opt-parser=false, enabled=true
+
+# GlobalStreaming App
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BiliBiliIntl/BiliBiliIntl.list, tag=🎞BiliBiliIntl（非大陆版）, force-policy=BiliBili（非大陆版）, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Bahamut/Bahamut.list, tag=🎞巴哈姆特, force-policy=巴哈姆特, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list, tag=🎞Netflix, force-policy=Netflix, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list, tag=🎞YouTube, force-policy=YouTube, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTubeMusic/YouTubeMusic.list, tag=🎞YouTubeMusic, force-policy=YouTube, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/TikTok/TikTok.list, tag=🎞TikTok, force-policy=TikTok, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Disney/Disney.list, tag=🎞Disney, force-policy=国际媒体, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Spotify/Spotify.list, tag=🎞Spotify, force-policy=国际媒体, update-interval=172800, opt-parser=false, enabled=true
+
+# GlobalSNS App
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Clubhouse/Clubhouse.list, tag=📨ClubHouse, force-policy=GlobalSNS, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Discord/Discord.list, tag=📨Discord, force-policy=GlobalSNS, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Facebook/Facebook.list, tag=📨Facebook, force-policy=GlobalSNS, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Telegram/Telegram.list, tag=📨Telegram, force-policy=GlobalSNS, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Twitter/Twitter.list, tag=📨Twitter, force-policy=GlobalSNS, update-interval=172800, enabled=true
+
+# AI Platforms
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/OpenAI/OpenAI.list, tag=🤖AI_Platforms, force-policy=AI_Platforms, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BardAI/BardAI.list, tag=🤖AI_Platforms, force-policy=AI_Platforms, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Claude/Claude.list, tag=🤖AI_Platforms, force-policy=AI_Platforms, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/AI_Platforms_qx.list, tag=🤖AI_Platforms, force-policy=AI_Platforms, update-interval=172800, opt-parser=false, enabled=true
+
+# StreamingSE 中国流媒体服务(面向海外版本)，一般为中国大陆的流媒体面向港澳台或海外的版本，不同于独立版本
+# 部分流媒体（如哔哩哔哩（僅限港澳台地區）、愛奇藝海外站、芒果TV国际）如果直接代理会影响中国大陆版内容的播放
+# 所以以策略组的形式，在需要观看面向港澳台或海外的版本时切换代理，日常可选直连。 
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/ChinaMedia/ChinaMedia.list, tag=🎞ChinaMedia, force-policy=direct, update-interval=172800, opt-parser=false, enabled=true
+
+# 区域流媒体
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AsianMedia/AsianMedia.list, tag=🎞AsianMedia, force-policy=港台番剧, update-interval=172800, opt-parser=false, enabled=true
+
+# Streaming 国际流媒体服务
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/GlobalMedia/GlobalMedia.list, tag=🎞GlobalMedia, force-policy=国际媒体, update-interval=172800, enabled=true
+
+# Global 全球加速
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Global/Global.list, tag=🇺🇳Global, force-policy=全球加速, update-interval=172800, enabled=true
+
+# China 中国直连
+https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/refs/heads/main/Rules/Region/ChinaASN.list, tag=ChinaASN, force-policy=direct, update-interval=172800, opt-parser=true, enabled=true
+https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/refs/heads/main/Rules/Region/China.list, tag=China, force-policy=direct, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/refs/heads/main/Rules/Region/ChinaIP.list, tag=ChinaIP, force-policy=direct, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/17mon/china_ip_list/master/china_ip_list.txt#type=rule, tag=ChinaIPv4, force-policy=direct, update-interval=172800, opt-parser=false, enabled=false
+https://gaoyifan.github.io/china-operator-ip/china6.txt#type=rule, tag=ChinaIPv6, force-policy=direct, update-interval=172800, opt-parser=false, enabled=false
+
 #
 # Params "tag" and "enabled" are optional.
 #
 [rewrite_remote]
 ;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-import-rewrite.snippet, tag=Sample, enabled=true
 ;https://example.com/rewrite.snippet, tag=Sample, require-devices=ID1, ID2, enabled=true
+
+# BlockHTTPDNS
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/BlockHTTPDNS/BlockHTTPDNS.conf, tag=🛡BlockHTTPDNS, enabled=true
+
+# Advertising 广告
+# 毒奶去广告计划（与https://limbopro.com/Adblock4limbo.list分流共用）
+https://limbopro.com/Adblock4limbo.conf, tag=🛡AdblockForLimbo, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=🛡NoByDa（lhie1 Rewrite）, enabled=true
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Js.conf, tag=🛡NoByDa（NoByDa Rewrite）, enabled=true
+
+# 重定向
+;https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/QuantumultX/Redirect/Redirect.conf
+
+https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, tag=Sub-store(高级订阅管理器), enabled=true
 
 #
 # Only obfs=http, obfs=ws, obfs=wss can have optional "obfs-uri" field.
@@ -308,6 +430,11 @@ final, proxy
 #
 ;* * * * * https://example.com/sample.js#this-is-not-sent-to-server&key1=value1&key2=value2, tag=Sample, enabled=true
 
+# > 流媒体解锁查询
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体解锁查询, img-url=arrowtriangle.right.square.system, enabled=true
+;event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js, tag=流媒体服务查询, img-url=checkmark.seal.system, enabled=true
+# > GeoIP 查询
+event-interaction https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/geo_location.js, tag=GeoIP 查询, img-url=location.fill.viewfinder.system, enabled=true
 
 #
 # Deploy a local HTTP server and use JavaScript for data processing.
@@ -323,6 +450,7 @@ final, proxy
 ;sample.js, tag=sample, path=^/sample/v1/, require-devices=ID1, ID2, enabled=true
 ;convert.js, tag=fileConverter, path=^/convert/v1/
 
+https://raw.githubusercontent.com/chavyleung/scripts/master/chavy.box.js, host=boxjs.com, tag=BoxJS, path=^/, enabled=true
 
 #
 # If the source IP of the TCP connection is matched by the skip_src_ip, the hostname will not be evaluated. The wildcard * and ? are supported.
