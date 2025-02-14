@@ -135,7 +135,6 @@ url-latency-benchmark=英国节点, server-tag-regex=((IEPL|IPLC).*英.*)|(.*英
 url-latency-benchmark=韩国节点, server-tag-regex=((IEPL|IPLC).*韩.*)|(.*韩.*专线.*)|(.*Korea.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 static=Netflix节点, server-tag-regex=(.*Netflix.*)|(.*NF.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
 static=AI_Platforms节点, server-tag-regex=(.*GPT.*)|(.*AI.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-static=Duolingo节点, server-tag-regex=(.*GPT.*)|(.*AI.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
 static=DNS查询节点, direct, 香港节点, proxy
 
 #
