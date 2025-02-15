@@ -66,17 +66,20 @@ dns_exclusion_list = *.cmpassport.com, *.jegotrip.com.cn, *.icitymobile.mobi, id
 ;circumvent-ipv4-answer = 127.0.0.1, 0.0.0.0
 ;circumvent-ipv6-answer = ::
 ;prefer-doh3
-;no-system
+no-system
 no-ipv6
-server = 223.5.5.5
-server = 114.114.114.114
-server = 119.29.29.29
+;server = 223.5.5.5
+;server = 114.114.114.114
+;server = 119.29.29.29
 server = 8.8.8.8
+doq-server = quic://dns-unfiltered.adguard.com
 ;doq-server = quic://dns.adguard.com
 ;doq-server = quic://dns1.example.com, quic://dns2.example.com
 ;doq-server = quic://dns.adguard.com, excluded_ssids=SSID1
 ;doq-server = quic://dns.adguard.com, included_ssids=SSID2
 ;doh-server = https://dns.alidns.com/dns-query
+;doh-server = https://1.1.1.1/dns-query
+doh-server = https://dns.google/dns-query
 ;doh-server = https://exmaple1.com/dns-query, https://exmaple2.com/dns-query
 ;doh-server = https://223.6.6.6/dns-query, excluded_ssids=SSID1
 ;doh-server = https://223.5.5.5/dns-query, included_ssids=SSID2
@@ -111,8 +114,8 @@ server = 8.8.8.8
 ;round-robin = policy-name-7, resource-tag-regex=^sample, server-tag-regex=^example
 ;dest-hash = policy-name-8, resource-tag-regex=^sample, server-tag-regex=^example
 ;url-latency-benchmark = policy-name-9, resource-tag-regex=^sample, server-tag-regex=^example, check-interval=600, alive-checking=false, tolerance=0
-
 static=全球加速, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+static=DNS查询, direct, DNS查询节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Roundrobin.png
 static=Apple, direct, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
 static=AI_Platforms, AI_Platforms节点, proxy, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
 static=Duolingo节点, 全球加速, 香港节点, 台湾节点, 日本节点, 狮城节点, 美国节点, 英国节点, 韩国节点, proxy, direct, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/UN.png
@@ -135,7 +138,7 @@ url-latency-benchmark=英国节点, server-tag-regex=((IEPL|IPLC).*英.*)|(.*英
 url-latency-benchmark=韩国节点, server-tag-regex=((IEPL|IPLC).*韩.*)|(.*韩.*专线.*)|(.*Korea.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png
 static=Netflix节点, server-tag-regex=(.*Netflix.*)|(.*NF.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netflix.png
 static=AI_Platforms节点, server-tag-regex=(.*GPT.*)|(.*AI.*), check-interval=600, tolerance=0, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-static=DNS查询节点, direct, 香港节点, proxy
+dest-hash=DNS查询节点, server-tag-regex=.*, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Roundrobin.png
 
 #
 # Params "tag" and "enabled" are optional.
@@ -149,21 +152,24 @@ static=DNS查询节点, direct, 香港节点, proxy
 ;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server.snippet, update-interval=-1, tag=Sample-01
 ;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/server-complete.snippet, tag=Sample-02, as-policy=static, img-url=http://example.com/icon.png, enabled=false
 ;https://example.com/server.snippet, tag=Sample-03, img-url=http://example.com/icon.png, require-devices=ID1, ID2, enabled=false
+https://dy.drfjtdkfkjmdfjdfgsdgsdhs.com/api/v1/client/subscribe?token=8599ed0b52089bf7347c47e555b3f7fd, tag=DuangCloud, update-interval=172800, opt-parser=false, enabled=false
+https://apiv1.v27qae.com/flydsubal/mevyrmquodejbrvx?quantumult=1&extend=1, tag=Flyingbird, update-interval=172800, opt-parser=false, enabled=true
+https://cm-sub.pz.pe/subscribe/FTGGROJF7OAD8BL5?app=quantumultx, tag=CMYNetwork, update-interval=172800, opt-parser=false, enabled=true
+https://mie-sub.pz.pe/subscribe/BXMKUFCBSZOMR1ZM?app=quantumultx, tag=Mielink, update-interval=172800, opt-parser=false, enabled=false
 
 #
 # Params "tag", "force-policy" and "enabled" are optional.
 # When there is a force-policy, then the policy in filter of remote resource will be ignored and the force-policy will be used.
 #
 [filter_remote]
-FILTER_LAN, tag=LAN, force-policy=direct, enabled=true
-FILTER_REGION, tag=CN, force-policy=direct, enabled=true
+;FILTER_LAN, tag=LAN, force-policy=direct, enabled=true
+;FILTER_REGION, tag=CN, force-policy=direct, enabled=true
 ;https://raw.githubusercontent.com/crossutility/Quantumult-X/master/filter.snippet, tag=Sample, force-policy=your-policy-name, enabled=true
 ;https://example.com/filter.snippet, tag=Sample, force-policy=your-policy-name, require-devices=ID1, ID2, enabled=true
-
 # Block Http DNS
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/BlockHttpDNS/BlockHttpDNS.list, tag=🛡️BlockHttpDNS, force-policy=reject, update-interval=172800, enabled=true
 # Http DNS
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DNS/DNS.list, tag=DNS, force-policy=DNS查询节点, update-interval=172800, opt-parser=false, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/DNS/DNS.list, tag=DNS, force-policy=DNS查询, update-interval=172800, opt-parser=false, enabled=true
 
 # Advertising 广告 （毒奶/DivineEngine二选一）
 # 毒奶去广告计划（与https://limbopro.com/Adblock4limbo.conf重写共用）
@@ -178,7 +184,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Quant
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Hijacking/Hijacking.list, tag=🛡️Hijacking, force-policy=reject, update-interval=172800, enabled=true
 
 # stun 防泄露
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/STUN/STUN.list, tag=🛡️STUN, force-policy=reject, update-interval=172800, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/STUN/STUN.list, tag=🛡️STUN, force-policy=reject, update-interval=172800, opt-parser=false, enabled=false
 
 # 机场专线
 https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list, tag=✈️机场专线, force-policy=direct, update-interval=172800, enabled=true
@@ -353,17 +359,17 @@ https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/QX.snippet, ta
 ;host-suffix, googleapis.com, proxy, multi-interface-balance
 ;host-suffix, googleapis.com, proxy, via-interface=pdp_ip0
 ;ip6-cidr, 2001:4860:4860::8888/32, direct
-;ip-cidr, 10.0.0.0/8, direct
-;ip-cidr, 127.0.0.0/8, direct
-;ip-cidr, 172.16.0.0/12, direct
-;ip-cidr, 192.168.0.0/16, direct
-;ip-cidr, 224.0.0.0/24, direct
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
 ;geoip, cn, direct
 ;geoip, cn, direct, force-cellular
 ;ip-asn, 6185, proxy
 # You can add below host-keyword rule to skip the DNS query for all the non-matched hosts. Pure IP requests won't be matched by the host related rules.
 ;host-keyword, ., proxy
-final, proxy
+final, 漏网之鱼
 
 
 #
